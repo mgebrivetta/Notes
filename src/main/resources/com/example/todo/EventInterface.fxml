@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.5" orientation="VERTICAL" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.todo.Controller">
+    <items>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="82.0" prefWidth="818.0">
+            <children>
+                <Button fx:id="addEventButton" layoutX="2.0" layoutY="12.0" mnemonicParsing="false" onAction="#addEventHandler" text="Добавить событие" />
+                <DatePicker fx:id="datePicker" layoutX="135.0" layoutY="12.0" prefHeight="25.0" prefWidth="229.0" />
+                <TextField fx:id="eventDescriptionTextField" layoutX="383.0" layoutY="12.0" prefHeight="25.0" prefWidth="412.0" promptText="Напиши событие" />
+            <Button layoutX="2.0" layoutY="41.0" mnemonicParsing="false" onAction="#removeEvent" prefHeight="25.0" prefWidth="119.0" text="Удалить событие" />
+            </children>
+        </AnchorPane>
+        <ListView fx:id="eventListView" prefHeight="200.0" prefWidth="818.0" />
+    </items>
+</SplitPane>
